@@ -4,13 +4,14 @@
 
 //Colors in order: OilGrey, Blue, Yellow, White
 $darkest: #333;
-$medium: #114EEB;
+$medium: #4b88d8;
 $light: #FDCC55;
 $lightest: #fff;
 
 
 // Custom Styles
 body {
+  font-size:100%;
   margin:0;
   font-family: 'open sans' $helvetica;
 }
@@ -22,7 +23,6 @@ p {
 .page-container {
   margin:0 auto;
   text-align:center;
-  border:1px solid #dddddd;
 }
 
 header {
@@ -39,9 +39,8 @@ header {
 
 .outer-container {
   @include outer-container;
-  background: $light; 
+  background: $light;
   padding: 40px 0;
-
 
   p {
     @include span-columns(8);
@@ -49,7 +48,10 @@ header {
   }
 
   h2 {
-    padding: 60px 0;
+    padding: 50px 0;
+    text-shadow:0 1px 1px $darkest;
+    letter-spacing:.15em;
+    font-size:1.5em;
   }
 }
 
@@ -80,7 +82,7 @@ h2 {
 
 .image-container {
 
-
+  height:320px;
   @include outer-container;
 
   ul {
@@ -88,6 +90,7 @@ h2 {
     margin: 0;
     padding: 0;
     @include clearfix;
+    height:100%;
 
   }
 
@@ -95,15 +98,16 @@ h2 {
     display: inline-block;
     float: left;
     width: 33.3%;
+    height:100%;
     border-top: solid 4px $medium;
     border-bottom: solid 4px $medium;
 
     img {
-      width: 100%; 
-      height: 320px;
+      width: 100%;
+      height:100%;
 
     }
-  
+
   }
 
 }
@@ -128,5 +132,19 @@ footer {
   .map {
     float:none;
     @include span-columns(12);
+  }
+}
+
+@media (max-width:600px) {
+  .image-container {
+    overflow:scroll;
+
+    ul {
+      width:300%;
+    }
+
+    li {
+      width:33.33%;
+    }
   }
 }
