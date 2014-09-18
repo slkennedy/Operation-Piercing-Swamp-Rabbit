@@ -2,9 +2,17 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+//Colors in order: OilGrey, Blue, Yellow, White
+$darkest: #333;
+$medium: #114EEB;
+$light: #FDCC55;
+$lightest: #fff;
+
+
 // Custom Styles
 body {
   margin:0;
+  font-family: 'open sans' $helvetica;
 }
 
 p {
@@ -19,7 +27,7 @@ p {
 
 header {
   @include span-columns(12);
-  background:url("http://claimyourjourney.com/wp-content/uploads/2012/06/bike.jpg");
+  background:$darkest;
   height:400px;
   background-size:100% 400px;
   color:#388dd3;
@@ -31,21 +39,33 @@ header {
 
 .outer-container {
   @include outer-container;
+  background: $light; 
+  padding: 40px 0;
+
 
   p {
     @include span-columns(8);
     @include shift(2);
+  }
+
+  h2 {
+    padding: 60px 0;
   }
 }
 
 .contact {
   @include span-columns(6);
   border:1px solid black;
+  background: $lightest;
 }
 
 .map {
   @include span-columns(6);
   border:1px solid red;
+  background: url("http://i.imgur.com/p3gjnKa.jpg");
+  background-size: 100% 100%;
+  height: 138px;
+
 }
 
 h1 {
@@ -58,13 +78,45 @@ h2 {
 }
 
 
-.images {
-  @include span-columns(12);
+.image-container {
+
+
+  @include outer-container;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include clearfix;
+
+  }
+
+  li {
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+    border-top: solid 4px $medium;
+    border-bottom: solid 4px $medium;
+
+    img {
+      width: 100%; 
+      height: 320px;
+
+    }
+  
+  }
+
+}
+
+.black {
+  background: $darkest;
+  color: $lightest;
 }
 
 footer {
   margin-top:20px;
   border-top:1px solid #222222;
+  padding: 20px 0;
 }
 
 @media (max-width:900px)  {
