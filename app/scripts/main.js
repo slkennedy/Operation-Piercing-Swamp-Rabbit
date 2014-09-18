@@ -9,7 +9,7 @@ function reusableFunction(container, templateID, model) {
 $.ajax( {
 	type: 'GET',
 	url: flickrUrl,
-	datatype: 'json'
+	dataType: 'json'
 }).done(function(images){
 	_.each(images.photos.photo, function(image) {
 		reusableFunction('.images', 'images-template', image);
