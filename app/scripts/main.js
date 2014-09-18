@@ -15,5 +15,3 @@ $.ajax( {
 		reusableFunction('.images', 'images-template', image);
 	});
 });
-
-

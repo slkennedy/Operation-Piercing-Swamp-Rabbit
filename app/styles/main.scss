@@ -7,20 +7,74 @@ body {
   margin:0;
 }
 
+p {
+  float:none !important;
+}
+
 .page-container {
-  width:965px;
   margin:0 auto;
   text-align:center;
   border:1px solid #dddddd;
 }
 
 header {
+  @include span-columns(12);
   background:url("http://claimyourjourney.com/wp-content/uploads/2012/06/bike.jpg");
   height:400px;
   background-size:100% 400px;
   color:#388dd3;
 }
 
+.page-container {
+    max-width:965px;
+}
+
+.outer-container {
+  @include outer-container;
+
+  p {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+.contact {
+  @include span-columns(6);
+  border:1px solid black;
+}
+
+.map {
+  @include span-columns(6);
+  border:1px solid red;
+}
+
 h1 {
   margin:0;
+}
+
+h2 {
+  @include span-columns(6);
+  @include shift(3);
+}
+
+
+.images {
+  @include span-columns(12);
+}
+
+footer {
+  margin-top:20px;
+  border-top:1px solid #222222;
+}
+
+@media (max-width:900px)  {
+  .contact {
+    float:none;
+    @include span-columns(12);
+  }
+
+  .map {
+    float:none;
+    @include span-columns(12);
+  }
 }
