@@ -18,19 +18,22 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <!-- Google Map Script -->
-  <!--   <script type="text/javascript"
+    <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk">
     </script>
     <script type="text/javascript">
-    var mapOptions = {
-    center: new google.maps.LatLng(34.846791, -82.402418);
-    zoom: 8;
-    };
-    var map = new google.maps.Map(document.getElementById('map'),
-    mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script> -->
+    var myLatLng = {lat: 34.844282, lng: -82.401705}
+      function initialize() {
+        var mapOptions = {
+          center: myLatLng,
+          zoom: 16
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
   </head>
   <body>
     <div class="page-container">
@@ -43,7 +46,7 @@
         <h2>Bringing you the best in bicycle gear, equipment and community since 1999!</h2>
       </div>
       <div class="container">
-        <!-- Use .container as outer container for Bourbon Neat -->
+       <!-- Use .container as outer container for Bourbon Neat-->
         <div class="image-container">
           <ul class="images">
           </ul>
@@ -53,7 +56,7 @@
         <p class="cool">From mountain bikes to kids' training wheels, we've got what you need. Come join us for our Saturday community events or just stop by to say hello!</p>
       </div>
       <div class="container">
-        <!-- Use .container as outer container for Bourbon Neat -->
+        <!--Use .container as outer container for Bourbon Neat-->
         <div class="outer-container background">
           <div class="contact">
             <p>Visit, call or email us today and get the most out of your bike riding experience!</p>
@@ -61,14 +64,17 @@
             <a class="email" href="mailto:">swamprabbitcycling@example.com</a>
           </div>
           <div class="map">
-            <!-- <iframe width="360px" height="250px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Swamp%20Rabbit%20Trail%2C%20Greenville%2C%20SC%2C%20United%20States&key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk"></iframe> -->
+
+            <!-- <iframe width="360px" height="250px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Swamp%20Rabbit%20Trail%2C%20Greenville%2C%20SC%2C%20United%20States&key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk"></iframe>-->
+
           </div>
         </div>
       </div>
     <footer>2014 Swamp Rabbit Cycling, LLC.</footer>
   </div>
   <script type="text/template" id="images-template">
-  <li class=image><img src= "https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg" /></li>
+  <li style="background-image:url(https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg)">
+  </li>
   </script>
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
