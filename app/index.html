@@ -25,10 +25,10 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk">
     </script>
     <script type="text/javascript">
-    var myLatLng = {lat: 34.844282, lng: -82.401705} 
+    var myLatLng = {lat: 34.844282, lng: -82.401705}
       function initialize() {
         var mapOptions = {
-          center: myLatLng, 
+          center: myLatLng,
           zoom: 16
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -66,6 +66,9 @@
             <a class="phone" href=tel:"+12025550127">(202) 555-0127</a>
             <a class="email" href="mailto:">swamprabbitcycling@example.com</a>
           </div>
+          <div class="map">
+            <!--<iframe width="360px" height="250px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Swamp%20Rabbit%20Trail%2C%20Greenville%2C%20SC%2C%20United%20States&key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk"></iframe>-->
+          </div>
         </div>
       </div>
       <div class="map-parent">
@@ -74,7 +77,8 @@
     <footer>2014 Swamp Rabbit Cycling, LLC.</footer>
   </div>
   <script type="text/template" id="images-template">
-  <li class=image><img src= "https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg" /></li>
+  <li style="background-image:url(https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg)">
+  </li>
   </script>
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->

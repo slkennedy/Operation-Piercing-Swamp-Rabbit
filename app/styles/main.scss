@@ -116,6 +116,8 @@ h2 {
         height: 100%;
     }
     li {
+        background-size:cover;
+        background-repeat:no-repeat;
         display: inline-block;
         float: left;
         width: 33.3%;
@@ -159,14 +161,20 @@ footer {
     }
 }
 
+@media (max-width:800px) {
+  .image-container {
+    overflow:scroll;
+    ul {
+      width:150%;
+    }
+  }
+}
+
 @media (max-width: 600px) {
     .image-container {
         overflow: scroll;
         ul {
             width: 300%;
-        }
-        li {
-            width: 33.33%;
         }
     }
 }
