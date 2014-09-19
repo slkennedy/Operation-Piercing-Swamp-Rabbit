@@ -44,11 +44,11 @@ header {
         background: HSLA(214, 65%, 68%, 0.2);
     }
 }
-
 .outer-container {
     @include outer-container;
     background: $light;
     padding: 40px 0;
+
     border-bottom: solid 10px $darkest;
     p {
         @include span-columns(8);
@@ -61,6 +61,12 @@ header {
         letter-spacing: .15em;
         font-size: 1.5em;
     }
+}
+
+.map-parent {
+  width: 100%;
+  height: 225px;
+
 }
 
 .phone {
@@ -87,12 +93,6 @@ header {
 
 .contact {
     @include span-columns(6);
-    background: $lightest;
-}
-
-.map {
-    @include span-columns(6);
-    height: 100%;
     background: $lightest;
 }
 
