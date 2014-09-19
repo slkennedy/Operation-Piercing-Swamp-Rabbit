@@ -116,6 +116,10 @@ h2 {
         height: 100%;
     }
     li {
+        background:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7uy7GYRacc_lScFehF4ZLikAlK9q4JQFQTjnWuMZ6MR70M8wIRQ");
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
         display: inline-block;
         float: left;
         width: 33.3%;
@@ -129,18 +133,8 @@ h2 {
 }
 
 .black {
-<<<<<<< Updated upstream
     background: #4b88d8;
     color: $darkest;
-=======
-  background: #4b88d8;
-  color: $darkest;
-}
-
-.yellow {
-  margin: 30px;
-  background: $lightest;
->>>>>>> Stashed changes
 }
 
 footer {
