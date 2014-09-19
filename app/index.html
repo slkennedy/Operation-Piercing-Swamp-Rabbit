@@ -68,7 +68,13 @@
     <footer>2014 Swamp Rabbit Cycling, LLC.</footer>
   </div>
   <script type="text/template" id="images-template">
-  <li class=image></li>
+  <li class=image>
+  <style>
+  .image {
+    background:url("https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg");
+  }
+  </style>
+  </li>
   </script>
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
