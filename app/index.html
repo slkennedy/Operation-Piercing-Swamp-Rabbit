@@ -18,19 +18,24 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <!-- Google Map Script -->
-  <!--   <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk">
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; width: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk">
     </script>
     <script type="text/javascript">
-    var mapOptions = {
-    center: new google.maps.LatLng(34.846791, -82.402418);
-    zoom: 8;
-    };
-    var map = new google.maps.Map(document.getElementById('map'),
-    mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script> -->
+    var myLatLng = {lat: 34.844282, lng: -82.401705} 
+      function initialize() {
+        var mapOptions = {
+          center: myLatLng, 
+          zoom: 16
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
   <body>
     <div class="page-container">
@@ -52,6 +57,7 @@
       <div class="outer-container black">
         <p class="cool">From mountain bikes to kids' training wheels, we've got what you need. Come join us for our Saturday community events or just stop by to say hello!</p>
       </div>
+
       <div class="container">
         <!-- Use .container as outer container for Bourbon Neat -->
         <div class="outer-container background">
@@ -60,10 +66,10 @@
             <a class="phone" href=tel:"+12025550127">(202) 555-0127</a>
             <a class="email" href="mailto:">swamprabbitcycling@example.com</a>
           </div>
-          <div class="map">
-            <iframe width="360px" height="250px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Swamp%20Rabbit%20Trail%2C%20Greenville%2C%20SC%2C%20United%20States&key=AIzaSyBw4K03wb2-iZFymKEeU3hx9dBgp7iJGXk"></iframe>
-          </div>
         </div>
+      </div>
+      <div class="map-parent">
+        <div id="map-canvas"></div>
       </div>
     <footer>2014 Swamp Rabbit Cycling, LLC.</footer>
   </div>
@@ -76,7 +82,7 @@
   <!-- endbuild -->
   <!-- build:js scripts/main.js -->
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>
