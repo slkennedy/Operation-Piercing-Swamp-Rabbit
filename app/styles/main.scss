@@ -34,6 +34,7 @@ header {
     background-size: cover;
     background-position: center center;
     opacity: 1;
+     border-bottom: solid 10px $darkest;
     &::after {
         content: "";
         position: absolute;
@@ -44,6 +45,7 @@ header {
         background: HSLA(214, 65%, 68%, 0.2);
     }
 }
+
 .outer-container {
     @include outer-container;
     background: $light;
@@ -56,12 +58,17 @@ header {
         // text-align: center;
         font-size: 1.2em;
     }
-    h2 {
+   
+}
+
+ h2 {
         text-shadow: 0 1px 1px $darkest;
         letter-spacing: .15em;
         font-size: 1.5em;
+        @include span-columns(6);
+        @include shift(3);
+        color: $darkest;
     }
-}
 
 .map-parent {
   width: 100%;
@@ -69,40 +76,43 @@ header {
 
 }
 
-.phone {
-    margin: 0;
-    color: $medium;
-    padding: 0;
-    font-size: 1.2em;
-}
-
-.email {
-    margin: 0;
-    color: $medium;
-    padding: 0;
-    font-size: 1.2em;
-    display: block;
-    a {
-        text-decoration: none;
-    }
-}
-
 .background {
-    background: $lightest;
+    background: #f2f1f0;
 }
 
 .contact {
-    @include span-columns(6);
-    background: $lightest;
-}
+    @include span-columns(12);
+    background: #f2f1f0;
+    font-size: em(13px);
 
-h1 {
-    margin: 0;
-}
+  .phone {
+      margin: 0;
+      color: $medium;
+      padding: 0;
+      font-size: 1.2em;
 
-h2 {
-    @include span-columns(6);
-    @include shift(3);
+      &:before {
+        content: "\2706";
+        margin-right: 2px;
+      }
+  }
+
+  .email {
+      margin: 0;
+      color: $medium;
+      padding: 0;
+      font-size: 1.2em;
+      display: block;
+
+      a {
+          text-decoration: none;
+      }
+
+      &:before {
+        content: "\2709";
+        margin-right: 2px;
+      }
+  }
 }
 
 .image-container {
@@ -136,28 +146,34 @@ h2 {
 }
 
 footer {
+  
     background: $light;
     padding: 45px 0;
+    text-shadow: 0 1px 1px $darkest;
 }
 
 @media (max-width: 900px) {
     .contact {
         float: none;
         @include span-columns(12);
-        margin-top: -40px;
     }
     .email {
         font-size: 1em;
-        margin-bottom: 20px;
     }
     .phone {
         font-size: 1em;
-        color: $medium;
+        color: $medium; 
     }
-    a {
-        float: none;
-        @include span-columns(8);
-        @include shift(2);
+    .map {
+       @include span-columns(12);
+    }    
+}
+
+@media (max-width: 700px) {
+   h2 {
+      font-size: em(18px);
+      @include span-columns(10);
+      @include shift(1);
     }
 }
 
@@ -177,4 +193,18 @@ footer {
             width: 300%;
         }
     }
+
+     h2 {
+      font-size: em(18px);
+      @include span-columns(10);
+      @include shift(1);
+    }
 }
+
+
+
+
+
+
+
+
