@@ -116,7 +116,7 @@ h2 {
         height: 100%;
     }
     li {
-        background:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7uy7GYRacc_lScFehF4ZLikAlK9q4JQFQTjnWuMZ6MR70M8wIRQ");
+        background:url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/bike-wallpaper-12.jpg");
         background-position:center;
         background-size:cover;
         background-repeat:no-repeat;
@@ -163,14 +163,20 @@ footer {
     }
 }
 
+@media (max-width:800px) {
+  .image-container {
+    overflow:scroll;
+    ul {
+      width:150%;
+    }
+  }
+}
+
 @media (max-width: 600px) {
     .image-container {
         overflow: scroll;
         ul {
             width: 300%;
-        }
-        li {
-            width: 33.33%;
         }
     }
 }
