@@ -58,7 +58,7 @@ header {
         // text-align: center;
         font-size: 1.2em;
     }
-   
+
 }
 
  h2 {
@@ -162,11 +162,11 @@ footer {
     }
     .phone {
         font-size: 1em;
-        color: $medium; 
+        color: $medium;
     }
     .map {
        @include span-columns(12);
-    }    
+    }
 }
 
 @media (max-width: 700px) {
@@ -200,11 +200,3 @@ footer {
       @include shift(1);
     }
 }
-
-
-
-
-
-
-
-
