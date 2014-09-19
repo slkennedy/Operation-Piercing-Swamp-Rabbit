@@ -129,8 +129,18 @@ h2 {
 }
 
 .black {
+<<<<<<< Updated upstream
     background: #4b88d8;
     color: $darkest;
+=======
+  background: #4b88d8;
+  color: $darkest;
+}
+
+.yellow {
+  margin: 30px;
+  background: $lightest;
+>>>>>>> Stashed changes
 }
 
 footer {
