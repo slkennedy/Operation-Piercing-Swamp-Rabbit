@@ -24,6 +24,7 @@ p {
     margin: 0 auto;
     max-width: 965px;
     text-align: center;
+    overflow:hidden;
 }
 
 header {
@@ -117,6 +118,7 @@ header {
 
 .image-container {
     height: 320px;
+    width:101%;
     @include outer-container;
     ul {
         list-style: none;
