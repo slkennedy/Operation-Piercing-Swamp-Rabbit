@@ -44,8 +44,10 @@ gulp.task('extras', function () {
 });
 
 gulp.task('clean', function (cb) {
-  rimraf('.tmp', function () {
-    rimraf('dist', cb);
+  return rimraf('.tmp', function () {
+    return rimraf('dist', function(){
+      return $.cache.clearAll(cb);
+    });
   });
 });
 
