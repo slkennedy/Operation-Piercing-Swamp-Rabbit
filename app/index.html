@@ -28,7 +28,7 @@
     </script>
     <script type="text/javascript">
     var myLatlng = {lat: 34.845479, lng: -82.402021}
-    
+
     var mystyles = [
       {
         stylers: [
@@ -104,14 +104,14 @@
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
       }
-    
+
     function initialize() {
       var mapOptions = {
       center: myLatlng,
       zoom: 16,
       styles: mystyles
       };
-    
+
     var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
     var marker = new google.maps.Marker({
@@ -129,15 +129,16 @@
   <body>
     <div class="page-container">
       <header>
-        <div class="overlay">
-          <div class="logo"></div>
+        <div class="logo-holder">
+          <div class="logo">
+            <img src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1118695/pqVkQdAB7XwfWEm/sussudio.png">
+          </div>
         </div>
       </header>
       <div class="outer-container">
         <h2>Bringing you the best in bicycle gear, equipment and community since 1999!</h2>
       </div>
       <div class="container">
-       <!-- Use .container as outer container for Bourbon Neat-->
         <div class="image-container">
           <ul class="images">
           </ul>
@@ -147,12 +148,15 @@
         <p class="cool">From mountain bikes to kids' training wheels, we've got what you need. Come join us for our Saturday community events or just stop by to say hello!</p>
       </div>
       <div class="container">
-        <!--Use .container as outer container for Bourbon Neat-->
         <div class="outer-container background">
           <div class="contact">
             <p>Visit, call or email us today and get the most out of your bike riding experience!</p>
-            <a class="phone" href=tel:"+12025550127">(202) 555-0127</a>
-            <a class="email" href="mailto:">swamprabbitcycling@example.com</a>
+            <span>
+              <a class="phone" href=tel:"+12025550127">(202) 555-0127</a>
+            </span>
+            <span>
+              <a class="email" href="mailto:">swamprabbitcycling@example.com</a>
+            </span>
           </div>
         </div>
       </div>
